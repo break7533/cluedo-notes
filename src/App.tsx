@@ -3,7 +3,7 @@ import { TableComponent } from './components/table.component';
 import { HeaderComponent } from './components/header.component';
 import styled from 'styled-components';
 
-const Card = styled.div`
+const Card = styled.table`
   display: grid;
   justify-content: center;
   margin-top: 50px;
@@ -18,10 +18,12 @@ const [rooms, setRooms] = useState(['Ballroom', 'Billiard Room', 'Conservatory',
 
   return (
     <Card >
+      <tbody>
       <HeaderComponent players={players}/>
       <TableComponent className="Suspects" title='Suspects' cards={suspects} players={players}/>
       <TableComponent className="Weapons" title='Weapons' cards={weapons} players={players}/>
       <TableComponent className="Rooms" title='Rooms' cards={rooms} players={players}/>
+      </tbody>
     </Card>
   );
 }
