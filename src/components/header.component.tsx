@@ -12,7 +12,7 @@ function renderPlayer(player: string): JSX.Element {
 export function HeaderComponent(props: HeaderProps): JSX.Element {
   return (
       <thead>
-        <td>Cluedo</td>
+        <td></td>
         {props.players.map((p) => renderPlayer(p))}
       </thead>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { ButtonComponent } from './button.component';
 
 interface TableProps {
@@ -8,10 +9,19 @@ interface TableProps {
     cards: string[];
 }
 
+const Title = styled.thead`
+    font-size: 2rem;
+    font-weight: bold;
+`;
+
+const RowTitle = styled.thead`
+    font-weight: bold;
+`;
+
 function renderSuspectRow(suspect: string, players: string[]): JSX.Element {
     return (
         <tr>
-            <thead>{suspect}</thead>
+            <RowTitle>{suspect}</RowTitle>
             {players.map(() => {
                 return (
                     <td>
@@ -26,9 +36,9 @@ function renderSuspectRow(suspect: string, players: string[]): JSX.Element {
 export function TableComponent(props: TableProps): JSX.Element {
     return (
         <>
-            <thead>
+            <Title>
                 <td>{props.title}</td>
-            </thead>
+            </Title>
 
             {props.cards.map((s) => renderSuspectRow(s, props.players))}
         </>
