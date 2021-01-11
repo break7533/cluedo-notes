@@ -10,10 +10,10 @@ const CardStyles = styled.table`
 `;
 
 function App(): JSX.Element {
-    const [players, setPlayers] = useState(['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣']);
-    const [suspects, setSuspects] = useState(['Mustard', 'Orchid', 'Peacock', 'Plum', 'Scarlett', 'Green']);
-    const [weapons, setWeapons] = useState(['Candlestick', 'Dagger', 'Lead Pipe', 'Revolver', 'Rope', 'Wrench']);
-    const [rooms, setRooms] = useState(['Ballroom', 'Billiard Room', 'Conservatory', 'Dining Room', 'Hall', 'Kitchen',
+    const [players] = useState(['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣']);
+    const [suspects] = useState(['Mustard', 'Orchid', 'Peacock', 'Plum', 'Scarlett', 'Green']);
+    const [weapons] = useState(['Candlestick', 'Dagger', 'Lead Pipe', 'Revolver', 'Rope', 'Wrench']);
+    const [rooms] = useState(['Ballroom', 'Billiard Room', 'Conservatory', 'Dining Room', 'Hall', 'Kitchen',
         'Library', 'Lounge', 'Study']);
 
     return (
