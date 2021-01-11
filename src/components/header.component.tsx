@@ -1,19 +1,26 @@
 import React from 'react';
-import Cell from '../styles/Cell';
+import styled from 'styled-components';
+import { CellStyles } from '../styles/Cell';
 
 interface HeaderProps {
-  players: string[];
+    players: string[];
 }
 
+const TableHeadStyles = styled.thead`
+    display: table;
+`;
+
 function renderPlayer(player: string): JSX.Element {
-  return <Cell>{player}</Cell>;
+    return <CellStyles key={player}>{player}</CellStyles>;
 }
 
 export function HeaderComponent(props: HeaderProps): JSX.Element {
-  return (
-      <thead>
-        <td></td>
-        {props.players.map((p) => renderPlayer(p))}
-      </thead>
-  );
+    return (
+        <TableHeadStyles>
+            <tr>
+                <th></th>
+                {props.players.map((p) => renderPlayer(p))}
+            </tr>
+        </TableHeadStyles>
+    );
 }

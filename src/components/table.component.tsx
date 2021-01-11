@@ -9,22 +9,22 @@ interface TableProps {
     cards: string[];
 }
 
-const Title = styled.thead`
+const TitleStyles = styled.tr`
     font-size: 2rem;
     font-weight: bold;
 `;
 
-const RowTitle = styled.thead`
+const RowTitleStyles = styled.td`
     font-weight: bold;
 `;
 
 function renderSuspectRow(suspect: string, players: string[]): JSX.Element {
     return (
-        <tr>
-            <RowTitle>{suspect}</RowTitle>
-            {players.map(() => {
+        <tr key={suspect}>
+            <RowTitleStyles>{suspect}</RowTitleStyles>
+            {players.map((player) => {
                 return (
-                    <td>
+                    <td key={player}>
                         <ButtonComponent />
                     </td>
                 );
@@ -36,10 +36,9 @@ function renderSuspectRow(suspect: string, players: string[]): JSX.Element {
 export function TableComponent(props: TableProps): JSX.Element {
     return (
         <>
-            <Title>
+            <TitleStyles>
                 <td>{props.title}</td>
-            </Title>
-
+            </TitleStyles>
             {props.cards.map((s) => renderSuspectRow(s, props.players))}
         </>
     );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CellButton from '../styles/CellButton';
+import { CellButtonStyles } from '../styles/CellButton';
 import { ButtonStatus } from '../enums/button-status.enum';
 
 function renderEmoji(status: ButtonStatus): JSX.Element {
@@ -37,8 +37,8 @@ export function ButtonComponent(): JSX.Element {
     }
 
     return (
-        <CellButton type="button" onClick={handleClick}>
+        <CellButtonStyles type="button" onClick={handleClick}>
             {renderEmoji(status)}
-        </CellButton>
+        </CellButtonStyles>
     );
 }
