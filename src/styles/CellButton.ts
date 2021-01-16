@@ -6,6 +6,8 @@ export const CellButtonStyles = styled.div`
   height: 30px;
   text-align: center;
   transition: all 0.3s ease;
+  display: table-cell;
+  vertical-align: middle;
   
   
   
@@ -14,10 +16,15 @@ export const CellButtonStyles = styled.div`
     border: 0;
     width: 26px;
     height: 26px;
+    vertical-align: middle;
 
     :hover {
-    background: linear-gradient(to bottom right, #37cfdc 0%, #5a88e5 100%);
-    transform: scale(1.3);
-  }
+      background: linear-gradient(to bottom right, #37cfdc 0%, #5a88e5 100%);
+      transform: scale(1.3);
+    }
+
+    :focus {
+      outline: none;
+    }
   }
 `;

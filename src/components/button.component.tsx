@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CellButtonStyles } from '../styles/CellButton';
 import { ButtonStatus } from '../enums/button-status.enum';
 
-function renderEmoji(status: ButtonStatus): string {
+function renderEmoji(status: ButtonStatus): JSX.Element {
     let emoji = '';
     switch (status) {
         case ButtonStatus.EMPTY:
@@ -22,7 +22,7 @@ function renderEmoji(status: ButtonStatus): string {
         default:
             break;
     }
-    return emoji;
+    return <span>{emoji}</span>;
 }
 
 export function ButtonComponent(): JSX.Element {
