@@ -7,6 +7,12 @@ interface InputProps {
 
 const InputStyles = styled.input`
      width: 30px;
+     height: 30px;
+     text-align: center;
+     box-sizing: border-box;
+     ::placeholder{
+         opacity:0.8;
+     }
 `;
 
 export function InputComponent(props: InputProps): JSX.Element {
