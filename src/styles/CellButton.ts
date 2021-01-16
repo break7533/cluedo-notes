@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const CellButtonStyles = styled.div`
-  background: linear-gradient(to bottom right, #37cfdc 0%, #5a88e5 100%);
+  --gradient-start: var(--gradient-blue-1);
+  --gradient-end: var(--gradient-blue-2);
+  
+  background: linear-gradient(to bottom right, var(--gradient-start) 0%, var(--gradient-end) 100%);
   width: 30px;
   height: 30px;
   text-align: center;
   transition: all 0.3s ease;
   display: table-cell;
   vertical-align: middle;
-  
-  
   
   button {
     background-color: var(--background-grey);
@@ -19,7 +20,7 @@ export const CellButtonStyles = styled.div`
     vertical-align: middle;
 
     :hover {
-      background: linear-gradient(to bottom right, #37cfdc 0%, #5a88e5 100%);
+      background: linear-gradient(to bottom right, var(--gradient-start) 0%, var(--gradient-end) 100%);
       transform: scale(1.3);
     }
 
@@ -27,4 +28,20 @@ export const CellButtonStyles = styled.div`
       outline: none;
     }
   }
+
+  &.🛑 {
+    --gradient-blue-1: var(--gradient-red-1);
+    --gradient-end: var(--gradient-red-2);
+  }
+
+  &.✅ {
+    --gradient-blue-1: var(--gradient-green-1);
+    --gradient-end: var(--gradient-green-2);
+  }
+
+  &.❓ {
+    --gradient-blue-1: var(--gradient-yellow-1);
+    --gradient-end: var(--gradient-yellow-2);
+  }
+  
 `;

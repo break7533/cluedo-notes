@@ -10,7 +10,7 @@ interface TableProps {
 }
 
 const TitleStyles = styled.tr`
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: bold;
     
     td {

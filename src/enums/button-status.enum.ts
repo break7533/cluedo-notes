@@ -1,7 +1,6 @@
 export enum ButtonStatus {
-    EMPTY,
-    RED_X,
-    GREEN_TICK,
-    QUESTION_MARK,
-    EXCLAMATION_MARK,
+    EMPTY = 0,
+    RED_X = 1,
+    GREEN_TICK = 2,
+    QUESTION_MARK = 3,
 }

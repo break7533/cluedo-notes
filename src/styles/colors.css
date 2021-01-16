@@ -1,4 +1,12 @@
 :root {
     --background-grey: #263238;
     --text-color: #BAC9D0;
+    --gradient-blue-1:#37cfdc;
+    --gradient-blue-2: #5a88e5;
+    --gradient-red-1:#ff616d;
+    --gradient-red-2: #ffc171;
+    --gradient-green-1:#58ac30;
+    --gradient-green-2: #a7df62;
+    --gradient-yellow-1:#f3f9a6;
+    --gradient-yellow-2: #cbc634;
 }
