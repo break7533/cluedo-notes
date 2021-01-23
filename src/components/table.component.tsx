@@ -12,9 +12,9 @@ interface TableProps {
 const TitleStyles = styled.tr`
     font-size: 2em;
     font-weight: bold;
-    
+
     td {
-        color: white
+        color: white;
     }
 `;
 
@@ -26,10 +26,14 @@ function renderSuspectRow(suspect: string, players: string[]): JSX.Element {
     return (
         <tr key={suspect}>
             <RowTitleStyles>{suspect}</RowTitleStyles>
-            {players.map((player) => {
+            {players.map((player, i) => {
                 return (
-                    <td key={player}>
-                        <ButtonComponent />
+                    <td key={player + i}>
+                        <ButtonComponent
+                            name={suspect}
+                            row={player}
+                            column={`${i}`}
+                        />
                     </td>
                 );
             })}

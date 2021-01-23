@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CellButtonStyles } from '../styles/CellButton';
 import { ButtonStatus } from '../enums/button-status.enum';
+import { useStateWithLocalStorage } from '../hooks/getlocalStorage.hook';
+
+interface ButtonProps {
+    name: string,
+    row: string,
+    column: string,
+}
 
 function renderEmoji(status: ButtonStatus): string {
     let emoji = '';
@@ -22,19 +29,19 @@ function renderEmoji(status: ButtonStatus): string {
     return emoji;
 }
 
-export function ButtonComponent(): JSX.Element {
-    const [status, setStatus] = useState(ButtonStatus.EMPTY);
+export function ButtonComponent(props: ButtonProps): JSX.Element {
+    const [status, setStatus] = useStateWithLocalStorage(props.name + props.row + props.column, '0');
 
     function handleClick(): void {
         const maxButtons = Object.values(ButtonStatus).length / 2;
-        if (status === maxButtons - 1) {
-            return setStatus(0);
+        if (status === `${maxButtons - 1}`) {
+            return setStatus('0');
         }
 
-        return setStatus(status + 1);
+        return setStatus(`${parseInt(status) + 1}`);
     }
 
-    const emoji = renderEmoji(status);
+    const emoji = renderEmoji(parseInt(status));
 
     return (
         <CellButtonStyles className={emoji}>

@@ -17,6 +17,9 @@ function App(): JSX.Element {
         'Library', 'Lounge', 'Study']);
 
     return (
+        <>
+        <button onClick={() => {localStorage.clear();
+        location.reload();}}>Restart game</button>
         <CardStyles >
             {/* <HeaderComponent players={players} /> */}
             <tbody>
@@ -26,6 +29,7 @@ function App(): JSX.Element {
                 <TableComponent className="Rooms" title='Rooms' cards={rooms} players={players} />
             </tbody>
         </CardStyles>
+        </>
     );
 }
 
