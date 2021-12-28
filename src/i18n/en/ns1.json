@@ -1,0 +1,32 @@
+{
+    "characters": {
+        "title": "Suspects",
+        "Mustard": "Mustard",
+        "Orchid": "Orchid",
+        "Peacock": "Peacock",
+        "Plum": "Plum",
+        "Scarlett": "Scarlett",
+        "Green": "Green"
+    },
+    "weapons": {
+        "title": "Weapons",
+        "Candlestick": "Candlestick2",
+        "Dagger": "Dagger",
+        "Lead": "Lead",
+        "Revolver": "Revolver",
+        "Rope": "Rope",
+        "Wrench": "Wrench"
+    },
+    "rooms": {
+        "title": "Rooms",
+        "Ballroom": "Ballroom",
+        "Billiard": "Billiard",
+        "Library": "Library",
+        "Study": "Study",
+        "Hall": "Hall",
+        "Dining": "Dining",
+        "Garden": "Garden",
+        "Conservatory": "Conservatory",
+        "Kitchen": "Kitchen"
+    }
+}
