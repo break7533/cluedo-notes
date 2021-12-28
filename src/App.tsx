@@ -26,35 +26,25 @@ function App(): JSX.Element {
     const weapons = [
         t('res:weapons.Candlestick'),
         t('res:weapons.Dagger'),
-        t('res:weapons.Lead Pipe'),
+        t('res:weapons.Lead'),
         t('res:weapons.Revolver'),
         t('res:weapons.Rope'),
         t('res:weapons.Wrench'),
     ];
     const rooms = [
         t('res:rooms.Ballroom'),
-        t('res:rooms.Billiard Room'),
+        t('res:rooms.Billiard'),
         t('res:rooms.Conservatory'),
-        t('res:rooms.Dining Room'),
+        t('res:rooms.Dining'),
         t('res:rooms.Hall'),
         t('res:rooms.Kitchen'),
         t('res:rooms.Library'),
-        t('res:rooms.Lounge'),
         t('res:rooms.Study'),
+        t('res:rooms.Garden'),
     ];
 
     return (
         <>
-            <button
-                onClick={() => {
-                    localStorage.clear();
-                    location.reload();
-                }}
-            >
-                Restart game
-            </button>
-            <button onClick={() => changeLanguage('pt')}>pt</button>
-            <button onClick={() => changeLanguage('en')}>en</button>
             <CardStyles>
                 <tbody>
                     <PlayersComponents className="Players" players={players} />
@@ -78,6 +68,16 @@ function App(): JSX.Element {
                     />
                 </tbody>
             </CardStyles>
+            <button
+                onClick={() => {
+                    localStorage.clear();
+                    location.reload();
+                }}
+            >
+                Restart game
+            </button>
+            <button onClick={() => changeLanguage('pt')}>pt</button>
+            <button onClick={() => changeLanguage('en')}>en</button>
         </>
     );
 }
