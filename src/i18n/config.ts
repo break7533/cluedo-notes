@@ -12,8 +12,12 @@ export const resources = {
     },
 } as const;
 
+const languages = ['en', 'pt'];
+
 i18n.use(initReactI18next).init({
-    lng: 'pt',
+    lng: languages.includes(navigator.language.slice(0, 2))
+        ? navigator.language.slice(0, 2)
+        : 'en',
     ns: ['res'],
     resources,
 });

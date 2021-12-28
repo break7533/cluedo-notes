@@ -1,6 +1,6 @@
 {
     "characters": {
-        "title":"Suspeitos",
+        "title": "Suspeitos",
         "Mustard": "Coronel Mustard",
         "Orchid": "Senhora White",
         "Peacock": "Senhora Peacock",
@@ -20,13 +20,13 @@
     "rooms": {
         "title": "Divisões",
         "Ballroom": "Salão de Baile",
-        "Billiard Room": "Sala de Bilhar",
+        "Billiard": "Sala de Bilhar",
+        "Conservatory": "Sala de Estar",
+        "Dining": "Sala de Jantar",
+        "Hall": "Entrada",
+        "Kitchen": "Cozinha",
         "Library": "Biblioteca",
         "Study": "Escritório",
-        "Hall": "Entrada",
-        "Dining Room": "Sala de Jantar",
-        "Garden": "Jardim de Inverno",
-        "Conservatory": "Sala de Estar",
-        "Kitchen": "Cozinha"
+        "Garden": "Jardim de Inverno"
     }
 }

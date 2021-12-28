@@ -10,7 +10,7 @@
     },
     "weapons": {
         "title": "Weapons",
-        "Candlestick": "Candlestick2",
+        "Candlestick": "Candlestick",
         "Dagger": "Dagger",
         "Lead": "Lead",
         "Revolver": "Revolver",
@@ -21,12 +21,12 @@
         "title": "Rooms",
         "Ballroom": "Ballroom",
         "Billiard": "Billiard",
+        "Conservatory": "Conservatory",
+        "Dining": "Dining",
+        "Hall": "Hall",
+        "Kitchen": "Kitchen",
         "Library": "Library",
         "Study": "Study",
-        "Hall": "Hall",
-        "Dining": "Dining",
-        "Garden": "Garden",
-        "Conservatory": "Conservatory",
-        "Kitchen": "Kitchen"
+        "Garden": "Garden"
     }
 }
